@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+:root {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+::before,
+::after {
+  box-sizing: inherit;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 380px;
+  height: auto;
   display: flex;
   flex-direction: column;
+  background: orange;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input[type="text"] {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  height: 40px;
+  padding: 0 10px;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  letter-spacing: 0.2px;
+}
+button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  display: flex;
+  height: 40px;
+  outline: none;
+  border: 1px solid #000;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #e6ff00;
+  text-transform: uppercase;
 }
-
-.App-link {
-  color: #61dafb;
+button:hover {
+  filter: brightness(1.1);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-transform: capitalize;
+}
+.error {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: red;
+  text-transform: capitalize;
+}
+.loading {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
